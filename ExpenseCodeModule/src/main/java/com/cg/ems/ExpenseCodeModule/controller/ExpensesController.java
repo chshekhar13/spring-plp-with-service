@@ -30,7 +30,7 @@ public class ExpensesController {
 	
 	//display all
 	@GetMapping("/expensecodemodule/")
-	//@CrossOrigin("http://localhost:4200")
+	@CrossOrigin("http://localhost:4200")
 	public List<ExpenseCodeModule> displayExpenses() {
 		//List<ExpenseCodeModule> list = (List<ExpenseCodeModule>) repo.findAll();
 		List<ExpenseCodeModule> list = service.findAll();
@@ -42,7 +42,7 @@ public class ExpensesController {
 	
 	//display by id
 	@GetMapping("/expensecodemodule/{id}")
-	//@CrossOrigin("http://localhost:4200")
+	@CrossOrigin("http://localhost:4200")
 	public Optional<ExpenseCodeModule> displayById(@PathVariable("id") int id) {
 		//Optional<ExpenseCodeModule> expense = repo.findById(id);
 		Optional<ExpenseCodeModule> expense = service.displayById(id);
